@@ -1,0 +1,5 @@
+{
+  "output": "www",
+  "contents": "src",
+  "port": 3000
+}
