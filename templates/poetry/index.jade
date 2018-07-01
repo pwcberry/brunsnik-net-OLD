@@ -1,0 +1,6 @@
+extends ../index
+
+block content
+    - var pages = contents["poetry"]._.pages.map((item) => item.metadata["title"]);
+    each item in pages
+        p!=item

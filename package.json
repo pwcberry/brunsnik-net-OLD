@@ -4,6 +4,8 @@
   "description": "The source of www.brunsnik.net",
   "main": "index.js",
   "scripts": {
+    "build": "wintersmith build",
+    "server": "wintersmith preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +13,10 @@
     "url": "git+https://github.com/pwcberry/brunsnik-net.git"
   },
   "keywords": [
-    "brunsnik"
+    "brunsnik",
+    "writing",
+    "poetry",
+    "stories"
   ],
   "author": "Peter Berry",
   "license": "MIT",
@@ -20,6 +25,7 @@
   },
   "homepage": "https://github.com/pwcberry/brunsnik-net#readme",
   "dependencies": {
-    "wintersmith": "^2.4.1"
+    "wintersmith": "^2.4.1",
+    "wintersmith-libsass": "^0.4.1"
   }
 }

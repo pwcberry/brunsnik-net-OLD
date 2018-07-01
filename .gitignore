@@ -75,3 +75,6 @@ typings/
 # IDE
 .idea
 package-lock.json
+
+# Output
+www
