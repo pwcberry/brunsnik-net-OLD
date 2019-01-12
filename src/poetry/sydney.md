@@ -42,8 +42,8 @@ Antipodean heart
 as fate drives me onto the Eastern Distributor toward London
  
 Sydney  
-Like my lover  
+like my lover  
 lying sunlit on sheets of blue gazing at me
 
 Beauty  
-To remind me of home
+to remind me of home
