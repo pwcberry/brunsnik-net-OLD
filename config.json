@@ -1,7 +1,11 @@
 {
   "output": "www",
   "contents": "src",
-  "port": 3000,
+  "ignore": [
+    "assets/svg/*.svg",
+    "docx/*.docx"
+  ],
+  "port": 10000,
   "plugins": [
     "wintersmith-libsass"
   ]

@@ -1,7 +1,7 @@
 {
   "name": "brunsnik.net",
   "version": "0.1.0",
-  "description": "The source of www.brunsnik.net",
+  "description": "The source of brunsnik.net",
   "main": "index.js",
   "scripts": {
     "build": "wintersmith build",

@@ -1,0 +1,60 @@
+@import "./style/_variables";
+
+@mixin bg-mob-portrait() {
+  background-image: url("/assets/jpg/brunsnik_bg_mob_portrait.jpg");
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: $background-bg-color url("/assets/jpg/brunsnik_bg_mob_landscape_50.jpg") no-repeat fixed top center;
+  background-size: cover;
+
+  @media screen and (min-width: 320px) and (orientation: portrait) {
+    background-image: url("/assets/jpg/brunsnik_bg_mob_portrait_50.jpg");
+  }
+
+  @media screen and (min-width: 568px) and (orientation: landscape) {
+    background-image: url("/assets/jpg/brunsnik_bg_mob_landscape.jpg");
+  }
+
+  @media screen and (min-width: 375px) and (orientation: portrait) {
+    @include bg-mob-portrait;
+  }
+
+  @media screen and (min-width: 800px) and (orientation: portrait) and (min-resolution: 144dpi) {
+    @include bg-mob-portrait;
+  }
+
+  @media screen and (min-width: 1536px) and (orientation: portrait) and (min-resolution: 144dpi) {
+    @include bg-mob-portrait;
+  }
+
+  @media screen and (min-width: 768px) and (orientation: portrait) and (max-resolution: 72dpi) {
+    background-image: url("/assets/jpg/brunsnik_bg_tablet_portrait_50.jpg");
+    background-size: contain;
+  }
+
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
+    background-image: url("/assets/jpg/brunsnik_bg_desktop_50.jpg");
+  }
+
+  @media screen and (min-width: 1200px) and (orientation: landscape) {
+    background-image: url("/assets/jpg/brunsnik_bg_desktop_75.jpg");
+  }
+
+  @media screen and (min-width: 1920px) and (orientation: landscape) {
+    background-image: url("/assets/jpg/brunsnik_bg_desktop.jpg");
+  }
+
+  @media screen and (min-width: 2048px) and (orientation: landscape) and (min-resolution: 144dpi) {
+    background-image: url("/assets/jpg/brunsnik_bg_desktop.jpg");
+  }
+}
