@@ -1,9 +1,12 @@
-body {
-  font-size: 1rem;
+.poem {
+  margin: 184px auto 0;
+  width: 1024px;
+  padding: 1.5rem 2rem;
+  background: rgba(255,255,0,0.2);
+
+  > h1:first-child {
+    margin-top: 0;
+    margin-bottom: 0.33em;
+  }
 }
 
-h1 {
-  font-family: itc-avant-garde-gothic-pro, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}

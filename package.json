@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "wintersmith build",
+    "dev":  "npm run server",
     "server": "wintersmith preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

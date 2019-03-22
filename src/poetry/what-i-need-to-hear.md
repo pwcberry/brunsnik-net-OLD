@@ -1,6 +1,6 @@
 ---
 title: What I need to hear
-template: poem.pug
+template: poetry/poem.pug
 collection: poetry
 firstLine: What I need to hear while
 ---
