@@ -1,7 +1,7 @@
 ---
 title: Sydney
 date: 2002-09-01
-template: poem.pug
+template: poetry/index.pug
 collection: poetry
 firstLine: Aware of your A-list properties
 excerpt:

@@ -1,5 +1,8 @@
 extends ../index
 
+block page-head
+    link(href="/poetry/poetry.css", rel="stylesheet", type="text/css")
+
 block content
     - var pages = contents["poetry"]._.pages.map((item) => item.metadata["title"]);
     each item in pages
