@@ -15,11 +15,11 @@ date: 2019-01-01
 template: poetry/poem.pug
 collection: poetry
 firstLine: [[1]]
-excerpt:
-  - [[1]]
-  - [[2]]
-  - [[3]]
-  - [[4]]
+excerpt: "[[1]]\n
+[[2]]\n
+[[3]]\n
+[[4]]\n
+"
 ---
 `);
 }
@@ -180,7 +180,7 @@ function transformToMarkdown(inputPath, outputPath) {
 }
 
 const inputDir = pathLib.join(__dirname, "../src/docx");
-const outputDir = "../src/poetry';
+const outputDir = "../src/poetry";
 const files = fs.readdirSync(inputDir);
 
 files.forEach(fileName => {
