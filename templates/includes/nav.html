@@ -1,0 +1,13 @@
+<script>
+    (() => {
+        const nav = document.querySelector("nav");
+        const icon = nav.querySelector(".icon");
+        const list = nav.querySelector("ul");
+        let isOpen = false;
+
+        icon.addEventListener("click", () => {
+            list.style.display = isOpen ? "none" : "block";
+            isOpen = !isOpen;
+        });
+    })();
+</script>

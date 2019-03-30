@@ -6,7 +6,10 @@ html(lang="en-AU")
         link(href="/main.css", rel="stylesheet", type="text/css")
         block page-head
     body#top
+        include includes/nav
+
         block content
 
         include includes/google.html
         include includes/image-replacement.html
+        include includes/nav.html

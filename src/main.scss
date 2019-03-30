@@ -61,11 +61,11 @@ body {
 }
 
 @media screen and (min-width: 1024px) and (orientation: landscape) and (min-resolution: 144dpi) {
-    main {
-      width: 940px;
-      margin: 128px auto 100vh;
-      padding: 2rem 1.75rem;
-    }
+  main {
+    width: 940px;
+    margin: 128px auto 100vh;
+    padding: 2rem 1.75rem;
+  }
 }
 
 @media screen and (min-width: 1024px) and (orientation: landscape) and (max-resolution: 72dpi) {
@@ -107,7 +107,7 @@ h2 {
 
   padding: 0.25em 0.33em;
   background-color: $main-bg-color;
-  box-shadow: 0 0 3px 2px rgba(255,255,255,.4);
+  box-shadow: 0 0 3px 2px rgba(255, 255, 255, .4);
   border-radius: 2px;
   font-size: 0.875rem;
 
@@ -116,5 +116,82 @@ h2 {
   &:hover {
     text-decoration: none;
     color: $link-color;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0.67rem;
+  right: 0.75rem;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+
+  background-color: $main-bg-color;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, .2);
+  border-radius: 2px;
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > svg {
+      width: 60%;
+    }
+
+    &:hover,
+    &:hover {
+      color: #f3f3f2;
+      background-color: $text-color;
+    }
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    top: calc(100% - 2px);
+    right: 0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, .2);
+  }
+
+  li {
+    width: 96px;
+    display: block;
+    border-bottom: 1px solid #CECDCB;
+    background-color: $main-bg-color;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: right;
+
+    &,
+    &:visited {
+      text-decoration: none;
+      color: $link-color;
+    }
+
+    &:hover,
+    &:hover:visited {
+      text-decoration: none;
+      color: #f3f3f2;
+      background-color: $text-color;
+    }
+
+    &:active {
+      color: $main-bg-color;
+      background-color: lighten($link-color, 20%);
+    }
   }
 }
