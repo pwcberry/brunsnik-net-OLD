@@ -4,7 +4,6 @@ const sqip = require("sqip");
 
 const sourcePath = pathLib.join(__dirname, "../src/assets/jpg");
 const sourceFiles = fs.readdirSync(sourcePath).filter(filename => /[a-z]\.jpg$/.test(filename));
-const outputPathSvg = pathLib.join(__dirname, "../templates/includes");
 const outputPathCss = pathLib.join(__dirname, "../src/style/backgrounds");
 
 sourceFiles.forEach(filename => {
@@ -18,9 +17,6 @@ sourceFiles.forEach(filename => {
     });
 
     const outputFilename = pathLib.basename(filename, ".jpg");
-
-    // console.log(`1> Writing to: ${pathLib.join(outputPathSvg, `${outputFilename}.svg`)}`);
-    // fs.writeFileSync(pathLib.join(outputPathSvg, `${outputFilename}.svg`), result.final_svg, {encoding: "utf8"});
 
     const base64Version = `
 @mixin svg-${outputFilename.replace(/_/g, "-")} {

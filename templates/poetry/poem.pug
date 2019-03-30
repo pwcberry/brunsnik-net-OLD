@@ -1,8 +1,9 @@
-extends ../index
+extends ../base
 
 block page-head
-    link(href="/poetry/poetry.css", rel="stylesheet", type="text/css")
+    link(href="/styles/poem.css", rel="stylesheet", type="text/css")
 
 block content
-    article.poem
-        != page.html
+    main#top
+        article.poem
+            != page.html

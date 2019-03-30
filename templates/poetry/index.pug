@@ -1,7 +1,7 @@
-extends ../index
+extends ../base
 
 block page-head
-    link(href="/poetry/poetry.css", rel="stylesheet", type="text/css")
+    link(href="/style/poetry.css", rel="stylesheet", type="text/css")
 
 block content
     -
@@ -13,15 +13,14 @@ block content
                 firstLine: item.metadata.firstLine,
                 excerpt: item.metadata.excerpt,
             }))
-    div.poetry
-        each item in pages
-            p.poem
-                a(href=item.url)=item.title
-            p #{item.firstLine}
-            p
-                pre #{item.excerpt}
-            p #{item.url}
-
-            code
-                pre #{item.data}
+    main#top
+        h1 Poetry
+        div.poetry
+            each item in pages
+                article.poem
+                    h2
+                        a(href=item.url)=item.title
+                    p #{item.excerpt}
+                    p.more
+                        a(href=item.url)="Continue reading..."
 
