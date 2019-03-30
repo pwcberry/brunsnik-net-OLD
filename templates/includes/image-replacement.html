@@ -1,0 +1,70 @@
+<script>
+    (() => {
+        const imageToWidth = new Map([
+            ["brunsnik_bg_desktop", ["1024px","1200px","1920px"]],
+            ["brunsnik_bg_tablet_portrait", ["768px"]],
+            ["brunsnik_bg_mob_portrait", ["320px","375px","800px","1536px"]],
+            ["brunsnik_bg_mob_landscape", ["568px"]]
+        ]);
+
+        const re = /\(min-width: ([0-9]+px)\)/;
+
+        const backgroundStyles = new Map(
+            Array.from(document.styleSheets[1].cssRules)
+                .map(rule => {
+                    const match = re.exec(rule.cssText);
+                    if (match && match[1]) {
+                        return [
+                            match[1],
+                            rule
+                        ];
+                    }
+                    return null;
+                }).filter(rule => rule !== null)
+        );
+
+        function applyStyle(imageKey, reader) {
+            imageToWidth.get(imageKey).forEach(width => {
+                const mediaRule = backgroundStyles.get(width);
+                const cssRule = mediaRule.cssRules[0];
+                cssRule.style.backgroundImage = `url("${reader.result}")`;
+            });
+        }
+
+        function downloadImages() {
+            Promise.all([
+                fetch("/assets/jpg/brunsnik_bg_desktop.jpg"),
+                fetch("/assets/jpg/brunsnik_bg_mob_portrait.jpg"),
+                fetch("/assets/jpg/brunsnik_bg_tablet_portrait.jpg"),
+                fetch("/assets/jpg/brunsnik_bg_mob_landscape.jpg")
+            ]).then(list => {
+                list.forEach((response, index) => {
+                    response.blob().then(data => {
+                        const reader = new FileReader();
+                        reader.addEventListener("load", () => {
+                            switch(index) {
+                                case 0:
+                                    applyStyle("brunsnik_bg_desktop", reader);
+                                    break;
+                                case 1:
+                                    applyStyle("brunsnik_bg_mob_portrait", reader);
+                                    break;
+                                case 2:
+                                    applyStyle("brunsnik_bg_tablet_portrait", reader);
+                                    break;
+                                case 3:
+                                    applyStyle("brunsnik_bg_mob_landscape", reader);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        });
+                        reader.readAsDataURL(data);
+                    });
+                });
+            });
+        }
+
+        downloadImages();
+    })();
+</script>
