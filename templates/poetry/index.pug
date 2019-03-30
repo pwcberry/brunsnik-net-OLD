@@ -13,7 +13,7 @@ block content
                 firstLine: item.metadata.firstLine,
                 excerpt: item.metadata.excerpt,
             }))
-    main#top
+    main
         h1 Poetry
         div.poetry
             each item in pages
@@ -23,4 +23,6 @@ block content
                     p #{item.excerpt}
                     p.more
                         a(href=item.url)="Continue reading..."
+
+        a.back-to-top(href="#top")="Back to top"
 
