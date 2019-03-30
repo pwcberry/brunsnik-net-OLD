@@ -78,3 +78,4 @@ package-lock.json
 
 # Output
 www
+src/docx

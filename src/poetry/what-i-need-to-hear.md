@@ -3,6 +3,15 @@ title: What I need to hear
 template: poetry/poem.pug
 collection: poetry
 firstLine: What I need to hear while
+excerpt: "What I need to hear while
+
+under this refreshing shower
+
+is the melody for that song
+
+people will remember years later
+
+"
 ---
 
 # What I need to hear

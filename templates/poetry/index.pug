@@ -4,6 +4,24 @@ block page-head
     link(href="/poetry/poetry.css", rel="stylesheet", type="text/css")
 
 block content
-    - var pages = contents["poetry"]._.pages.map((item) => item.metadata["title"]);
-    each item in pages
-        p!=item
+    -
+        var pages = contents["poetry"]._.pages
+            .filter(item => typeof item.metadata.title === "string" && item.metadata.title.length > 0)
+            .map((item) => ({
+                title: item.metadata.title,
+                url: item.url,
+                firstLine: item.metadata.firstLine,
+                excerpt: item.metadata.excerpt,
+            }))
+    div.poetry
+        each item in pages
+            p.poem
+                a(href=item.url)=item.title
+            p #{item.firstLine}
+            p
+                pre #{item.excerpt}
+            p #{item.url}
+
+            code
+                pre #{item.data}
+

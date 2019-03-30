@@ -4,11 +4,15 @@ date: 2002-09-01
 template: poetry/poem.pug
 collection: poetry
 firstLine: Aware of your A-list properties
-excerpt:
- - Aware of your A-list properties  
- - this splendid maritime figure  
- - fitting urban couture  
- - you grace this continent and the world 
+excerpt: "Aware of your A-list properties
+
+this splendid maritime figure
+
+fitting urban couture
+
+you grace this continent and the world
+
+"
 ---
 
 # Sydney
