@@ -15,10 +15,10 @@ date: 2019-01-01
 template: poetry/poem.pug
 collection: poetry
 firstLine: [[1]]
-excerpt: "[[1]]\n
-[[2]]\n
-[[3]]\n
-[[4]]\n
+excerpt: "<p>[[1]]</p>
+<p>[[2]]</p>
+<p>[[3]]</p>
+<p>[[4]]</p>
 "
 ---
 `);
@@ -36,62 +36,62 @@ function convertDocument(inputStream, outputStream) {
 
     saxStream.on("opentag", node => {
         switch (node.name) {
-        case "w:pStyle":
-            if ((node.attributes["w:val"] === "Heading1") || (node.attributes["w:val"] === "Title")) {
-                outputStream.write("# ");
-                format.heading = true;
-            }
-            break;
-        case "w:p":
-            format.paragraph = true;
-            break;
-        case "w:i":
-            format.run.push("i");
-            outputStream.write("_");
-            break;
-        case "w:b":
-            format.run.push("b");
-            outputStream.write("**");
-            break;
-        case "w:r":
-            format.run = [];
-            break;
-        default:
-            break;
+            case "w:pStyle":
+                if ((node.attributes["w:val"] === "Heading1") || (node.attributes["w:val"] === "Title")) {
+                    outputStream.write("# ");
+                    format.heading = true;
+                }
+                break;
+            case "w:p":
+                format.paragraph = true;
+                break;
+            case "w:i":
+                format.run.push("i");
+                outputStream.write("_");
+                break;
+            case "w:b":
+                format.run.push("b");
+                outputStream.write("**");
+                break;
+            case "w:r":
+                format.run = [];
+                break;
+            default:
+                break;
         }
     });
     saxStream.on("closetag", nodeName => {
         switch (nodeName) {
-        case "w:p":
-            if (format.text) {
-                if (format.heading) {
-                    outputStream.write("\n\n");
+            case "w:p":
+                if (format.text) {
+                    if (format.heading) {
+                        outputStream.write("\n\n");
+                    } else {
+                        outputStream.write("  \n");
+                    }
+                    format.text = false;
+                    format.heading = false;
+                    format.paragraph = false;
                 } else {
-                    outputStream.write("  \n");
+                    outputStream.write("\n");
                 }
-                format.text = false;
-                format.heading = false;
-                format.paragraph = false;
-            } else {
-                outputStream.write("\n");
-            }
-            break;
-        case "w:r":
-            while (format.run.length) {
-                const node = format.run.pop();
-                if (node === "b") {
-                    outputStream.write("**");
-                } else if (node === "i") {
-                    outputStream.write("_");
+                break;
+            case "w:r":
+                while (format.run.length) {
+                    const node = format.run.pop();
+                    if (node === "b") {
+                        outputStream.write("**");
+                    } else if (node === "i") {
+                        outputStream.write("_");
+                    }
                 }
-            }
-            if (format.addSpace) {
-                outputStream.write(" ");
-                format.addSpace = false;
-            }
-            break;
-        default:
-            break;
+                if (format.addSpace) {
+                    outputStream.write(" ");
+                    format.addSpace = false;
+                }
+                break;
+            default:
+                break;
         }
     });
     saxStream.on("text", text => {
@@ -125,7 +125,7 @@ function transformToMarkdown(inputPath, outputPath) {
     const output = fs.createWriteStream(outputFilePath);
 
     output.on("close", () => {
-        let fileContents = fs.readFileSync(outputFilePath, { encoding: "utf8" });
+        let fileContents = fs.readFileSync(outputFilePath, {encoding: "utf8"});
         const lines = [];
         let passedFrontMatter = false;
         let lineCounter = -1;
@@ -151,6 +151,7 @@ function transformToMarkdown(inputPath, outputPath) {
         lines.forEach((line, index) => {
             fileContents = fileContents.replace(`[[${index}]]`, line);
             if (index === 1) {
+                // Duplicate replacement
                 fileContents = fileContents.replace(`[[${index}]]`, line);
             }
         });
@@ -179,12 +180,15 @@ function transformToMarkdown(inputPath, outputPath) {
     stream.pipe(zip);
 }
 
-const inputDir = pathLib.join(__dirname, "../src/docx");
+// const inputDir = pathLib.join(__dirname, "../src/docx");
+const inputDir = "C:\\Users\\berry\\OneDrive\\Documents\\Writing\\Poetry";
 const outputDir = "../src/poetry";
 const files = fs.readdirSync(inputDir);
 
 files.forEach(fileName => {
-    const filePath = pathLib.join(inputDir, fileName);
-    console.log("Processing: ", fileName);
-    transformToMarkdown(filePath, outputDir);
+    if (/\.docx$/.test(fileName)) {
+        const filePath = pathLib.join(inputDir, fileName);
+        console.log("Processing: ", fileName);
+        transformToMarkdown(filePath, outputDir);
+    }
 });

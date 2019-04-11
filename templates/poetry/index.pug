@@ -11,7 +11,7 @@ block content
                 title: item.metadata.title,
                 url: item.url,
                 firstLine: item.metadata.firstLine,
-                excerpt: item.metadata.excerpt,
+                excerpt: item.metadata.excerpt
             }))
     main
         h1 Poetry
@@ -20,8 +20,7 @@ block content
                 article.poem
                     h2
                         a(href=item.url)=item.title
-                    p #{item.excerpt}
-                    div !{"<p>The world thanks you!</p>"}
+                    div.poem__content !{item.excerpt}
                     p.more
                         a(href=item.url)="Continue reading..."
 

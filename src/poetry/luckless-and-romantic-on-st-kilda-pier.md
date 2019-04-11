@@ -4,14 +4,10 @@ date: 2019-01-01
 template: poetry/poem.pug
 collection: poetry
 firstLine: Sunset folds into dusk
-excerpt: "Sunset folds into dusk
-
-azure pursues the daily flame beyond the horizon
-
-growing tangerine feathers and crimson tails
-
-that linger
-
+excerpt: "<p>Sunset folds into dusk</p>
+<p>azure pursues the daily flame beyond the horizon</p>
+<p>growing tangerine feathers and crimson tails</p>
+<p>that linger</p>
 "
 ---
 

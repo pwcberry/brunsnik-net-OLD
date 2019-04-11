@@ -4,14 +4,10 @@ date: 2019-01-01
 template: poetry/poem.pug
 collection: poetry
 firstLine: Why as a society
-excerpt: "Why as a society
-
-Do we not feel the same excitement
-
-About space science
-
-As we do about football?
-
+excerpt: "<p>Why as a society</p>
+<p>Do we not feel the same excitement</p>
+<p>About space science</p>
+<p>As we do about football?</p>
 "
 ---
 

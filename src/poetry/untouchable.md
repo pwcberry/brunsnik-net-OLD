@@ -4,14 +4,10 @@ date: 2019-01-01
 template: poetry/poem.pug
 collection: poetry
 firstLine: when we converse
-excerpt: "when we converse
-
-your voice is like smoke carved from the night sky
-
-saturated in the syrup of knowledge
-
-we indulge in
-
+excerpt: "<p>when we converse</p>
+<p>your voice is like smoke carved from the night sky</p>
+<p>saturated in the syrup of knowledge</p>
+<p>we indulge in</p>
 "
 ---
 

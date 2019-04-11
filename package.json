@@ -6,8 +6,8 @@
   "scripts": {
     "build": "wintersmith build",
     "dev": "npm run server",
-    "docx": "node src/transform-docx.js",
-    "jpg": "node src/transform-jpg.js",
+    "docx": "node scripts/transform-docx.js",
+    "jpg": "node scripts/transform-jpg.js",
     "server": "wintersmith preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

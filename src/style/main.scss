@@ -24,7 +24,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: Garamond, Georgia, "Times New Roman", serif;
-  font-size: calc(1rem + 0.5vh);
+  font-size: calc(1rem + 0.25vh);
   line-height: 1.3;
   color: $text-color;
   background: $body-bg-color no-repeat fixed top center;
@@ -111,6 +111,7 @@ h2 {
   font-style: normal;
   font-size: 1.125rem;
 }
+
 
 .back-to-top {
   display: block;

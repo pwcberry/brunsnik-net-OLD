@@ -3,32 +3,44 @@
 
 @include space-at-bottom;
 
+main {
+  background-color: transparentize($main-bg-color, 0.03);
+}
+
 .poem {
-  background-color: rgba(231, 230, 229, 0.1);
+  background: $main-bg-color url("/assets/jpg/brunsnik_paper_texture.jpg") repeat;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
   border-radius: 2px;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 
   h2 {
     margin-top: 0;
     margin-bottom: 0.33em;
 
     > a {
-      color: $text-color;
+
       text-decoration: none;
 
       &:hover {
         text-decoration: none;
       }
 
+      &,
       &:visited {
-        color: darken($text-color, 10%);
+        color: $text-color;
       }
 
       &:active {
         color: $link-color;
       }
+    }
+
+    + p {
+      margin-top: 0;
     }
   }
 
@@ -53,3 +65,10 @@
   }
 }
 
+.poem__content {
+  p {
+    font-size: 0.9em;
+    margin-bottom: 0.25em;
+    margin-top: 0;
+  }
+}
