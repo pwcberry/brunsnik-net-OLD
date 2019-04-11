@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./mixins";
+
+@include space-at-bottom(4rem);
+
+main {
+  background: $main-bg-color url("/assets/jpg/brunsnik_paper_texture.jpg") repeat;
+}
+
+.tracks {
+  margin-top: 2rem;
+}
+
+.track {
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  h2 {
+    margin-bottom: 0.33em;
+  }
+}

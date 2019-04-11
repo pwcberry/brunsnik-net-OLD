@@ -1,0 +1,21 @@
+extends ./base
+
+block page-head
+    title Music | brunsnik
+    link(href="/style/music.css", rel="stylesheet", type="text/css")
+
+block content
+    -
+        const pages = contents["music"]._.pages;
+        const { music } = pages[0].metadata;
+
+    main
+        h1 Music
+        p Here is selection of music I have been working on. Most are still a work in progress!
+        div.tracks
+            each track in music
+                article.track
+                    h2 #{track.title}
+                    iframe(width="100%", height="300" scrolling="no" frameborder="no" allow="autoplay", src=track.src)
+
+        a.back-to-top(href="#top")="Back to top"

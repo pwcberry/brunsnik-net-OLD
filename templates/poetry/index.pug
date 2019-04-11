@@ -6,14 +6,14 @@ block page-head
 
 block content
     -
-        var pages = contents["poetry"]._.pages
+        const pages = contents["poetry"]._.pages
             .filter(item => typeof item.metadata.title === "string" && item.metadata.title.length > 0)
             .map((item) => ({
                 title: item.metadata.title,
                 url: item.url,
                 firstLine: item.metadata.firstLine,
                 excerpt: item.metadata.excerpt
-            }))
+            }));
     main
         h1 Poetry
         div.poetry

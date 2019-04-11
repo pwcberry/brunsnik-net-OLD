@@ -43,11 +43,11 @@ nav {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    box-shadow: -1px 1px 1px rgba(0, 0, 0, .2);
+    box-shadow: $nav-box-shadow;
   }
 
   li {
-    width: 96px;
+    width: 128px;
     display: block;
     border-bottom: 1px solid $nav-border-color;
     background-color: $nav-bg-color;
@@ -57,7 +57,7 @@ nav {
     display: block;
     padding: 0.5rem;
     width: 100%;
-    text-align: right;
+    text-align: center;
     cursor: pointer;
 
     &,
