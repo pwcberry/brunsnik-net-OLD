@@ -5,9 +5,20 @@
         const list = nav.querySelector("ul");
         let isOpen = false;
 
-        icon.addEventListener("click", () => {
+        const toggle = () => {
             list.style.display = isOpen ? "none" : "block";
             isOpen = !isOpen;
+        };
+
+        icon.addEventListener("click", (event) => {
+            toggle();
+            event.stopPropagation();
+        });
+
+        window.addEventListener("click", () => {
+            if (isOpen) {
+                toggle();
+            }
         });
     })();
 </script>

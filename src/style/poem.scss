@@ -1,7 +1,49 @@
+@import "./variables";
+@import "./mixins";
+
+@include space-at-bottom(25vh);
+
+main {
+  background: $main-bg-color url("/assets/jpg/brunsnik_paper_texture.jpg") repeat;
+}
+
 .poem {
   > h1 {
     margin-top: 0;
     margin-bottom: 0.33em;
+
+    + p {
+      margin-top: 0.25em;
+    }
   }
 }
 
+@include mobile-portrait {
+  .poem {
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+@include mobile-landscape {
+  .poem {
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+@include tablet-portrait {
+  .poem {
+    padding: 0 0.25rem;
+  }
+}
+
+@include desktop-landscape {
+  .poem {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+@include tablet-landscape {
+  .poem {
+    padding: 0 0.25rem;
+  }
+}

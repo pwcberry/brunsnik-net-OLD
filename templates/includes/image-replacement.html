@@ -13,7 +13,7 @@
             Array.from(document.styleSheets[1].cssRules)
                 .map(rule => {
                     const match = re.exec(rule.cssText);
-                    if (match && match[1]) {
+                    if (match && match[1] && rule.cssRules[0].style.backgroundImage) {
                         return [
                             match[1],
                             rule
@@ -23,7 +23,10 @@
                 }).filter(rule => rule !== null)
         );
 
+        console.log(backgroundStyles);
+
         function applyStyle(imageKey, reader) {
+            console.log("imageKey: ", imageKey);
             imageToWidth.get(imageKey).forEach(width => {
                 const mediaRule = backgroundStyles.get(width);
                 const cssRule = mediaRule.cssRules[0];

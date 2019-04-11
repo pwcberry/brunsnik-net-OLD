@@ -1,0 +1,39 @@
+@mixin mobile-portrait {
+  @media screen and (min-width: 320px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media screen and (min-width: 568px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media screen and (min-width: 768px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media screen and (min-width: 1024px) and (orientation: landscape) and (min-resolution: 144dpi) {
+    @content;
+  }
+}
+
+@mixin desktop-landscape {
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin space-at-bottom($size: 100vh) {
+  main {
+    margin-bottom: $size;
+  }
+
+  .back-to-top {
+    bottom: calc(-#{$size} + 1rem);
+  }
+}

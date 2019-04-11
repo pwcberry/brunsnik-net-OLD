@@ -1,7 +1,10 @@
 @import "./variables";
+@import "./mixins";
+
+@include space-at-bottom;
 
 .poem {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(231, 230, 229, 0.1);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-bottom: 2rem;
@@ -24,7 +27,7 @@
       }
 
       &:active {
-          color: $link-color;
+        color: $link-color;
       }
     }
   }
