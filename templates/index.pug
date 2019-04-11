@@ -1,8 +1,16 @@
 extends ./base
 
 block page-head
+    title brunsnik
     link(href="/style/index.css", rel="stylesheet", type="text/css")
 
 block content
     main
+        p Welcome to the website of brunsnik, a poet and aspiring music producer who lives in Melbourne, Australia.
+        div.links
+            div.link
+                a(href="/poetry") Poetry
+            div.link
+                a(href="/music") Music
 
+        a.back-to-top(href="#top")="Back to top"

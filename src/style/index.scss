@@ -3,3 +3,63 @@
 
 @include space-at-bottom;
 
+.links {
+  display: flex;
+}
+
+.link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: $main-bg-color url("/assets/jpg/brunsnik_paper_texture.jpg") repeat;
+
+  a {
+    &,
+    &:visited {
+      color: $link-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      color: darken($link-color, 10%);
+    }
+  }
+}
+
+@include mobile-portrait {
+  .links {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  .link {
+    width: 100%;
+    height: 5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@include mobile-landscape {
+  .links {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .link {
+    flex: 1;
+    max-width: 50%;
+    height: 5rem;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
