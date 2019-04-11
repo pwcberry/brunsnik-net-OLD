@@ -38,8 +38,8 @@ a reassurance the band
 only sees as nonsense finally  
 tossed into the musical trash.  
 
-_(Soon the shower’s coda glides down my skin.
-Drip, drop, dop. Da dee-dee du dummm…)_
+_(Soon the shower's coda glides down my skin.
+Drip, drop, dop. Da dee-dee du dummm...)_
 
 Flushed, I exit the bathroom,  
 pass the TV commune  
