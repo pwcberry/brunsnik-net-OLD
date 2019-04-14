@@ -1,6 +1,6 @@
 {
   "name": "brunsnik.net",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The source of brunsnik.net",
   "main": "index.js",
   "scripts": {
