@@ -21,6 +21,16 @@ block content
             return "";
         };
 
+        const sortByDate = (a, b) => {
+            if (a.date < b.date) {
+                return 1;
+            }  else if (a.date > b.date) {
+                return -1;
+            }
+
+            return a.title > b.title ? 1 : -1;
+        };
+
         const pages = contents["poetry"]._.pages
             .filter(item => typeof item.metadata.title === "string" && item.metadata.title.length)
             .map((item) => ({
@@ -29,7 +39,7 @@ block content
                 date: item.metadata.date,
                 dateString: format(item.metadata.date),
             }))
-            .sort((a, b) => (a.date < b.date ? 1 : -1));
+            .sort(sortByDate);
     main
         .poetry
             h1 Poetry
