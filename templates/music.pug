@@ -16,6 +16,8 @@ block content
             each track in music
                 article.track
                     h2 #{track.title}
-                    iframe(width="100%", height="300" scrolling="no" frameborder="no" allow="autoplay", src=track.src)
+                    iframe(width="100%", height="160" scrolling="no" frameborder="no" allow="autoplay", src=track.src)
+
+        p.copyright All content on this site is !{"&copy;"}2019 brunsnik
 
         a.back-to-top(href="#top")="Back to top"

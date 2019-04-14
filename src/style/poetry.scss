@@ -4,71 +4,68 @@
 @include space-at-bottom;
 
 main {
-  background-color: transparentize($main-bg-color, 0.03);
-}
-
-.poem {
   background: $main-bg-color url("/assets/jpg/brunsnik_paper_texture.jpg") repeat;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 1rem 1.25rem;
-  border-radius: 2px;
+}
 
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
+h2 {
+  margin: 0.33em 0;
 
-  h2 {
-    margin-top: 0;
-    margin-bottom: 0.33em;
+  > a {
+    text-decoration: none;
 
-    > a {
-
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
-
-      &,
-      &:visited {
-        color: $text-color;
-      }
-
-      &:active {
-        color: $link-color;
-      }
+    &:hover {
+      text-decoration: underline;
     }
 
-    + p {
-      margin-top: 0;
+    &,
+    &:visited {
+      color: $text-color;
     }
-  }
 
-  .more {
-    font-size: 0.875rem;
-
-    > a {
+    &:active {
       color: $link-color;
-
-      &:hover {
-        text-decoration: none;
-      }
-
-      &:visited {
-        color: $link-color;
-      }
-
-      &:active {
-        color: lighten($link-color, 20%);
-      }
     }
   }
 }
 
-.poem__content {
+.poetry {
+  ol {
+    list-style-type: none;
+    margin: 0;
+  }
+
   p {
-    font-size: 0.9em;
-    margin-bottom: 0.25em;
-    margin-top: 0;
+    margin-bottom: 0.33em;
   }
 }
+
+@include mobile-portrait {
+  .poetry, ol {
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+@include mobile-landscape {
+  .poetry, ol {
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+@include tablet-portrait {
+  .poetry, ol {
+    padding: 0 0.25rem;
+  }
+}
+
+@include desktop-landscape {
+  .poetry, ol {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+@include tablet-landscape {
+  .poetry, ol {
+    padding: 0 0.25rem;
+  }
+}
+

@@ -15,15 +15,16 @@ block content
                 excerpt: item.metadata.excerpt
             }));
     main
-        h1 Poetry
-        div.poetry
-            each item in pages
-                article.poem
-                    h2
-                        a(href=item.url)=item.title
-                    div.poem__content !{item.excerpt}
-                    p.more
-                        a(href=item.url)="Continue reading..."
+        .poetry
+            h1 Poetry
+            p An index by title
+            ol
+                each item in pages
+                    li.poem
+                        h2
+                            a(href=item.url)=item.title
+
+        p.copyright All content on this site is !{"&copy;"}2019 brunsnik
 
         a.back-to-top(href="#top")="Back to top"
 

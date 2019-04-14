@@ -3,6 +3,12 @@
 
 @include space-at-bottom;
 
+main {
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
 .links {
   display: flex;
 }
