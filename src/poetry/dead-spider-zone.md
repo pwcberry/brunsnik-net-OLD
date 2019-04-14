@@ -1,6 +1,6 @@
 ---
 title: Dead Spider Zone
-date: 2019-01-01
+date: 2004-06
 template: poetry/poem.pug
 collection: poetry
 firstLine: dead spider zone

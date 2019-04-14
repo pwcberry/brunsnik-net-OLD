@@ -1,6 +1,6 @@
 ---
 title: The Domain of Doubt
-date: 2019-01-01
+date: 1998-07
 template: poetry/poem.pug
 collection: poetry
 firstLine: wandering

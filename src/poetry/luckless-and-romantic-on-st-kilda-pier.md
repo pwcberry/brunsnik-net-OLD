@@ -1,6 +1,6 @@
 ---
 title: Luckless and Romantic on St Kilda Pier
-date: 2019-01-01
+date: 1998-07
 template: poetry/poem.pug
 collection: poetry
 firstLine: Sunset folds into dusk
@@ -59,4 +59,3 @@ as I meander under love’s canopy
 deaf to the bright steady clock made ugly by desire  
 but these beauties soar in search of favourable constellations  
 that I gaze at like a baffled adventurer  
-

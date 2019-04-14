@@ -28,7 +28,8 @@ block content
                 url: item.url,
                 date: item.metadata.date,
                 dateString: format(item.metadata.date),
-            }));
+            }))
+            .sort((a, b) => (a.date < b.date ? 1 : -1));
     main
         .poetry
             h1 Poetry
@@ -42,7 +43,7 @@ block content
                         a(href=item.url)=item.title
                         time=item.dateString
 
-        p.copyright All content on this site is !{"&copy;"}2019 brunsnik
+        p.copyright All content on this site !{"&copy;"}2019 brunsnik
 
         a.back-to-top(href="#top")="Back to top"
 

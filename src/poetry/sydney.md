@@ -1,6 +1,6 @@
 ---
 title: Sydney
-date: 2019-01-01
+date: 2002-10
 template: poetry/poem.pug
 collection: poetry
 firstLine: Aware of your A-list properties
@@ -27,7 +27,7 @@ near The Coathanger hooked into the
 blues of a Whiteley canvas stretched  
 over sand, sails and swimsuit snobbery  
    
-_      __This I farewell_  
+_This I farewell_  
    
 6.47am the taxi manoeuvres through bridge traffic  
 while a coda for my sojourn plays:  
@@ -47,7 +47,3 @@ lying sunlit on sheets of blue gazing at me
 
 Beauty  
 To remind me of home  
-
-_September 2002_  
-
-

@@ -18,6 +18,14 @@ main {
   }
 }
 
+time {
+  text-align: right;
+  font-style: italic;
+  display: inline-block;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
 @include mobile-portrait {
   .poem {
     padding: 0.5rem 1.25rem;

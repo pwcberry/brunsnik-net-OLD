@@ -1,6 +1,6 @@
 ---
 title: Begin with the grandeur
-date: 2019-01-01
+date: 1999-07
 template: poetry/poem.pug
 collection: poetry
 firstLine: Begin with the grandeur
@@ -58,4 +58,3 @@ in another struggle for words
 to describe the perfume  
 leaking from her sensuous tears drawn from sunshine  
 that flickers through the windows of failure.  
-

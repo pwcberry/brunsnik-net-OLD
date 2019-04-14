@@ -5,10 +5,28 @@ block page-head
     link(href="/style/poem.css", rel="stylesheet", type="text/css")
 
 block content
+    -
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            ];
+
+        const format = (s) => {
+            const re = /(\d\d\d\d)-(\d\d)/;
+            const match = re.exec(s);
+            if (match) {
+                const m = parseInt(match[2]) - 1;
+                return `${months[m]} ${match[1]}`;
+            }
+            return "";
+        };
+
     main
         article.poem
             != page.html
 
-        p.copyright All content on this site is !{"&copy;"}2019 brunsnik
+            time=format(page.metadata.date)
+
+        p.copyright All content on this site !{"&copy;"}2019 brunsnik
 
         a.back-to-top(href="#top")="Back to top"

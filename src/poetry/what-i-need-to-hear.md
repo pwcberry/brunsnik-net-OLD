@@ -2,6 +2,7 @@
 title: What I need to hear
 template: poetry/poem.pug
 collection: poetry
+date: 2008-07
 firstLine: What I need to hear while
 excerpt: "<p>What I need to hear while</p>
 <p>under this refreshing shower</p>
@@ -38,11 +39,12 @@ a reassurance the band
 only sees as nonsense finally  
 tossed into the musical trash.  
 
-_(Soon the shower’s coda glides down my skin.
-Drip, drop, dop. Da dee-dee du dummm…)_
+_(Soon the shower's coda glides down my skin.
+Drip, drop, dop. Da dee-dee du dummm...)_
 
 Flushed, I exit the bathroom,  
 pass the TV commune  
 to where my guitar waits by the futon.  
 I reach for it,  
 buzzing with a tune.
+

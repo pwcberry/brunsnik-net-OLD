@@ -1,10 +1,10 @@
 ---
 title: Fast Food
-date: 2019-01-01
+date: 1998-04
 template: poetry/poem.pug
 collection: poetry
-firstLine: As the hours mould to evening’s pace,
-excerpt: "<p>As the hours mould to evening’s pace,</p>
+firstLine: As the hours mould to evening's pace,
+excerpt: "<p>As the hours mould to evening's pace,</p>
 <p>franchises ignite their roadside emblems,</p>
 <p>and lure customers, saturated with lurid ads,</p>
 <p>carrying honest hungers or not.</p>
@@ -13,7 +13,7 @@ excerpt: "<p>As the hours mould to evening’s pace,</p>
 
 # Fast Food
 
-As the hours mould to evening’s pace,  
+As the hours mould to evening's pace,  
 franchises ignite their roadside emblems,  
 and lure customers, saturated with lurid ads,  
 carrying honest hungers or not.  
