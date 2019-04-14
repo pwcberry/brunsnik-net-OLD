@@ -3,8 +3,8 @@ title: On this day bulging with sunshine
 date: 2019-01-01
 template: poetry/poem.pug
 collection: poetry
-firstLine: Brain’s out-of-sync with the fresh photons
-excerpt: "<p>Brain’s out-of-sync with the fresh photons</p>
+firstLine: Brain's out-of-sync with the fresh photons
+excerpt: "<p>Brain's out-of-sync with the fresh photons</p>
 <p>bouncing through the kitchen</p>
 <p>with a smell of molten butter</p>
 <p>skipping along my shirt reaching for the mat.</p>
@@ -13,7 +13,7 @@ excerpt: "<p>Brain’s out-of-sync with the fresh photons</p>
 
 # On this day bulging with sunshine
 
-Brain’s out-of-sync with the fresh photons  
+Brain's out-of-sync with the fresh photons  
 bouncing through the kitchen  
 with a smell of molten butter  
    
@@ -59,4 +59,4 @@ neon pockets bulging with eyes
 awaiting  
 the first apple in conversation.  
 
-
+<time>July, 2004</time>

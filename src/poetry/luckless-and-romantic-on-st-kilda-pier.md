@@ -60,3 +60,4 @@ deaf to the bright steady clock made ugly by desire
 but these beauties soar in search of favourable constellations  
 that I gaze at like a baffled adventurer  
 
+<time>July, 1998</time>

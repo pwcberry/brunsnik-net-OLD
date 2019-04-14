@@ -91,3 +91,5 @@ and a weary passage home appears
 as I penetrate the daylight  
 loaded with the vagrant hopes of an  
 urban prophet  
+
+<time>July, 1998</time>

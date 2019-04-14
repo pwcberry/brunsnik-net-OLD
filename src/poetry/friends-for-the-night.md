@@ -18,7 +18,7 @@ of people around us
 we introduce ourselves  
 friends for the night  
 
-we share what’s close to heart  
+we share what's close to heart  
 as hours pass quickly with smiles  
 in the comfort of knowledge  
 we join hands as we rise with the music  
@@ -30,3 +30,4 @@ light-footed we jump on the bus
 we part before the magic fades  
 friends for the night  
 
+<time>April, 2018</time>
