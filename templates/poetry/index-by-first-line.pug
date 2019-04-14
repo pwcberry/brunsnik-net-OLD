@@ -1,0 +1,37 @@
+extends ../base
+
+block page-head
+    title Poetry | brunsnik
+    link(href="/style/poetry.css", rel="stylesheet", type="text/css")
+
+block content
+    -
+        const normalize = (s) => s.replace(/^[^a-zA-Z0-9]+/, '')
+            .replace(/[^a-zA-Z0-9]+$/, '')
+            .replace(/^([a-z])/, (s, s1) => s1.toUpperCase());
+
+        const pages = contents["poetry"]._.pages
+        .filter(item => typeof item.metadata.title === "string" && item.metadata.title.length)
+        .map((item) => ({
+            title: item.metadata.title,
+            url: item.url,
+            firstLine: normalize(item.metadata.firstLine)
+        }))
+        .sort((a, b) => (a.firstLine > b.firstLine ? 1 : -1));
+
+    main
+        .poetry
+            h1 Poetry
+            p Index by first line
+            nav.poetry-index-nav
+                a(href="/poetry/index-by-date.html") Index by date composed
+                a(href="/poetry/index.html") Index by title
+            ol
+                each item in pages
+                    li
+                        a(href=item.url, title=item.title)=item.firstLine
+
+        p.copyright All content on this site is !{"&copy;"}2019 brunsnik
+
+        a.back-to-top(href="#top")="Back to top"
+

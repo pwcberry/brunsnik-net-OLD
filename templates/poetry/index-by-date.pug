@@ -6,24 +6,41 @@ block page-head
 
 block content
     -
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        const format = (s) => {
+            const re = /(\d\d\d\d)-(\d\d)/;
+            const match = re.exec(s);
+            if (match) {
+                const m = parseInt(match[2]) - 1;
+                return `${months[m]} ${match[1]}`;
+            }
+            return "";
+        };
+
         const pages = contents["poetry"]._.pages
             .filter(item => typeof item.metadata.title === "string" && item.metadata.title.length)
             .map((item) => ({
                 title: item.metadata.title,
                 url: item.url,
-                excerpt: item.metadata.excerpt
+                date: item.metadata.date,
+                dateString: format(item.metadata.date),
             }));
     main
         .poetry
             h1 Poetry
-            p Index by title
+            p Index by date composed
             nav.poetry-index-nav
+                a(href="/poetry/index.html") Index by title
                 a(href="/poetry/index-by-first-line.html") Index by first line
-                a(href="/poetry/index-by-date.html") Index by date composed
             ol
                 each item in pages
                     li
                         a(href=item.url)=item.title
+                        time=item.dateString
 
         p.copyright All content on this site is !{"&copy;"}2019 brunsnik
 

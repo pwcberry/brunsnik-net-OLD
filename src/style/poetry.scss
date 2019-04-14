@@ -7,24 +7,26 @@ main {
   background: $main-bg-color url("/assets/jpg/brunsnik_paper_texture.jpg") repeat;
 }
 
-h2 {
-  margin: 0.33em 0;
+a {
+  text-decoration: underline;
+  display: block;
 
-  > a {
+  &:hover {
     text-decoration: none;
+  }
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &,
+  &:visited {
+    color: $text-color;
+  }
 
-    &,
-    &:visited {
-      color: $text-color;
-    }
+  &:active {
+    color: $link-color;
+  }
 
-    &:active {
-      color: $link-color;
-    }
+  + time {
+    font-size: 0.67rem;
+    font-style: italic;
   }
 }
 
@@ -32,39 +34,73 @@ h2 {
   ol {
     list-style-type: none;
     margin: 0;
+    padding: 0;
   }
 
-  p {
-    margin-bottom: 0.33em;
+  li {
+    margin-bottom: 0.75em;
   }
 }
 
+.poetry-index-nav {
+  width: 100%;
+  margin: 1em 0;
+  line-height: 1.5;
+
+  a {
+    flex: 1;
+    text-decoration: underline;
+    font-size: 0.75rem;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &,
+    &:visited {
+      color: $link-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: darken($link-color, 20%);
+    }
+
+    &:active {
+      color: darken($link-color, 20%);
+    }
+  }
+}
+
+
+
 @include mobile-portrait {
-  .poetry, ol {
+  .poetry {
     padding: 0.5rem 1.25rem;
   }
 }
 
 @include mobile-landscape {
-  .poetry, ol {
+  .poetry {
     padding: 0.5rem 1.25rem;
   }
 }
 
 @include tablet-portrait {
-  .poetry, ol {
+  .poetry {
     padding: 0 0.25rem;
   }
 }
 
 @include desktop-landscape {
-  .poetry, ol {
+  .poetry {
     padding: 0.25rem 0.75rem;
   }
 }
 
 @include tablet-landscape {
-  .poetry, ol {
+  .poetry {
     padding: 0 0.25rem;
   }
 }
