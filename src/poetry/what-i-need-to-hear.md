@@ -2,7 +2,7 @@
 title: What I need to hear
 template: poetry/poem.pug
 collection: poetry
-date: 2008-07
+date: 2010-09
 firstLine: What I need to hear while
 excerpt: "<p>What I need to hear while</p>
 <p>under this refreshing shower</p>

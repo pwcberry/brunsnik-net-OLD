@@ -1,6 +1,6 @@
 ---
 title: Fast Food
-date: 1998-04
+date: 1997-04
 template: poetry/poem.pug
 collection: poetry
 firstLine: As the hours mould to evening's pace,
