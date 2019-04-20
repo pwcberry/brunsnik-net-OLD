@@ -2,8 +2,16 @@ doctype html
 html(lang="en-AU")
     head
         meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="shortcut icon", href="/assets/favicon.png", type="image/png")
+        link(rel="dns-prefetch", href="https://use.typekit.net")
         link(href="https://use.typekit.net/kgg7dgk.css", rel="stylesheet")
         link(href="/style/main.css", rel="stylesheet", type="text/css")
+        style(media="print").
+            nav { display: none; }
+            .back-to-top { display: none; }
+            body { background-image: none; background-color: #FFF;}
+            main { background-image: none; }
+
         block page-head
     body#top
         include includes/nav
