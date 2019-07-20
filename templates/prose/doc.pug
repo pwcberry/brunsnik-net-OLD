@@ -1,0 +1,13 @@
+extends ../base
+
+block page-head
+    title #{page.title}
+
+block content
+    main
+        article.prose
+            != page.html
+
+        p.copyright All content on this site !{"&copy;"}2019 brunsnik
+
+        a.back-to-top(href="#top")="Back to top"
