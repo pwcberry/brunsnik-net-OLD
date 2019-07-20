@@ -1,6 +1,6 @@
 ---
 title: Luckless and Romantic on St Kilda Pier
-date: 1998-07
+date: 1997-05
 template: poetry/poem.pug
 collection: poetry
 firstLine: Sunset folds into dusk

@@ -40,7 +40,7 @@ breasts and legs in the shadow of a fey smile
 as she navigates each table like a butterfly;  
 suddenly the unfamiliar sunlight evaporates these absinthe visions  
 I retreat to my verbal fortification  
-bristling with a reputation unpublished in this bar’s chatter,  
+bristling with a reputation unpublished in this bar's chatter,  
 when the manifestation arrives to deposit her flyer.  
 My sensual flag flies up,  
 she glows in sultry code,  
@@ -52,7 +52,7 @@ torn from the literature of sex
 full of captured fantasies still shaking with glitter  
 while the sumptuous sunset remains to stain the air,  
 she watches her reflection like a stranger  
-where the phantoms’ dance enters the night  
+where the phantoms' dance enters the night  
 to collect the dreams I hammer out  
 in another struggle for words  
 to describe the perfume  
